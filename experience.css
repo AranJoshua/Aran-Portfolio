@@ -607,3 +607,22 @@
     margin: 1rem;
   }
 }
+
+/* Single-page layout adjustments for experience section */
+#experience .hero-content {
+  padding-top: 2rem;
+}
+
+#experience .experience-grid {
+  margin-top: 2rem;
+}
+
+/* Ensure experience section fits well in single-page layout */
+#experience {
+  min-height: auto;
+  padding-bottom: 4rem;
+}
+
+main, .main, .section {
+  margin-top: 70px;
+}

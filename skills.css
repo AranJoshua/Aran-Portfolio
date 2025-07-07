@@ -345,3 +345,22 @@
         transform: translateZ(0);
       }
     }
+
+    main, .main, .section {
+      margin-top: 50px;
+    }
+
+    /* Single-page layout adjustments for skills section */
+    #skills .hero-skills {
+      padding-top: 2rem;
+    }
+
+    #skills .skills-grid {
+      margin-top: 2rem;
+    }
+
+    /* Ensure skills section fits well in single-page layout */
+    #skills {
+      min-height: auto;
+      padding-bottom: 4rem;
+    }

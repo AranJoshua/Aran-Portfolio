@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | Aran</title>
+  <title>Aran | Portfolio</title>
    <link rel="stylesheet" href="index.css" />
+   <link rel="stylesheet" href="experience.css" />
+   <link rel="stylesheet" href="skills.css" />
    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cmFkaWFsR3JhZGllbnQgaWQ9ImJnIiBjeD0iNTAlIiBjeT0iNTAlIiByPSI1MCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMxNjE2MTY7c3RvcC1vcGFjaXR5OjEiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMwYTBhMGE7c3RvcC1vcGFjaXR5OjEiLz48L3JhZGlhbEdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0iYWNjIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMDBmZjg4O3N0b3Atb3BhY2l0eToxIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMzNmZjk5O3N0b3Atb3BhY2l0eToxIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTUiIGZpbGw9InVybCgjYmcpIiBzdHJva2U9InVybCgjYWNjKSIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9IjAuOSIvPjxjaXJjbGUgY3g9IjE2IiBjeT0iMTYiIHI9IjMiIGZpbGw9InVybCgjYWNjKSIgb3BhY2l0eT0iMC45Ii8+PGcgc3Ryb2tlPSJ1cmwoI2FjYykiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48cGF0aCBkPSJNMTYgMTMgTDE2IDggTTEzIDE2IEw4IDE2IE0xOSAxNiBMMjQgMTYgTTE2IDE5IEwxNiAyNCIgb3BhY2l0eT0iMC44Ii8+PHBhdGggZD0iTTE4LjUgMTMuNSBMMjIgMTAgTTE4LjUgMTguNSBMMjIgMjIgTTEzLjUgMTMuNSBMMTAgMTAiIG9wYWNpdHk9IjAuNiIvPjwvZz48ZyBmaWxsPSJ1cmwoI2FjYykiIG9wYWNpdHk9IjAuNyI+PGNpcmNsZSBjeD0iMTYiIGN5PSI4IiByPSIxLjUiLz48Y2lyY2xlIGN4PSI4IiBjeT0iMTYiIHI9IjEuNSIvPjxjaXJjbGUgY3g9IjI0IiBjeT0iMTYiIHI9IjEuNSIvPjxjaXJjbGUgY3g9IjE2IiBjeT0iMjQiIHI9IjEuNSIvPjxjaXJjbGUgY3g9IjIyIiBjeT0iMTAiIHI9IjEiLz48Y2lyY2xlIGN4PSIyMiIgY3k9IjIyIiByPSIxIi8+PGNpcmNsZSBjeD0iMTAiIGN5PSIxMCIgcj0iMSIvPjwvZz48L3N2Zz4=">
 </head>
 <body data-theme="dark">
@@ -27,9 +29,9 @@
     <div class="header-content">
       <div class="logo">ARAN</div>
       <nav class="nav">
-        <a href="index.html" class="nav-link active">Get to Know Me</a>
-        <a href="experience.html" class="nav-link">Experience & Certifications</a>
-        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="#about" class="nav-link active" data-section="about">Get to Know Me</a>
+        <a href="#experience" class="nav-link" data-section="experience">Experience & Certifications</a>
+        <a href="#skills" class="nav-link" data-section="skills">Skills</a>
         <button class="theme-toggle" aria-label="Toggle theme">
           <div class="theme-toggle-ball">🌙</div>
         </button>
@@ -38,7 +40,8 @@
   </header>
 
   <main class="main">
-    <section class="section active" id="get-to-know-me">
+    <!-- About Section -->
+    <section class="section active" id="about">
       <div class="hero">
         <div class="hero-content">
           <h1>Aran Joshua Ofracio</h1>
@@ -48,8 +51,8 @@
             If you're looking for someone who adds real value behind the scenes, I'm ready to step in and deliver.
           </p>
           <div class="cta-buttons">
-            <a href="experience.html" class="btn btn-primary">view experience</a>
-            <a href="skills.html" class="btn btn-secondary">explore skills</a>
+            <a href="#experience" class="btn btn-primary">view experience</a>
+            <a href="#skills" class="btn btn-secondary">explore skills</a>
           </div>
         </div>
         <div class="hero-image">
@@ -120,20 +123,365 @@
         <div class="content-grid">
           <div class="left-content">
             <div class="info-paragraph">
-              <p>When I'm not deep in tech or academics, I'm usually hanging out with friends, working on personal growth, or fitting in a quick workout when I can. I'm also big on games—Pokémon's been a longtime favorite (Gengar and Mimikyu are my personal favs), and I've spent a good chunk of time playing games like Final Fantasy and Swordigo.  I'm drawn to anything that challenges my thinking or helps me see things from a fresh perspective, which keeps me sharp beyond academics.</p>
+              <p>When I'm not deep in tech or academics, I'm usually hanging out with friends, working on personal growth, or fitting in a quick workout when I can. I'm also big on games, with Pokémon being a longtime favorite (Gengar and Mimikyu are my personal favs) but I've also spent a good chunk of time playing titles like Final Fantasy and Swordigo. I'm drawn to anything that challenges my thinking or helps me see things from a fresh perspective, like a game with unexpected mechanics or a story that unfolds in a way I didn't see coming. It's a way for me to stay mentally sharp while still having fun outside the usual grind.</p>
             </div>
           </div>
 
           <div class="right-content">
             <div class="interests-container">
               <div class="interests-header">
-                <h3>Beyond the Code</h3>
+                <h3>A+⁷ Fam</h3>
                 <div class="interests-line"></div>
               </div>
               <div class="interests-collage">
                 <img src="images/friends.jpg" alt="Friends Collage" class="collage-image">
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+      <div class="hero-content">
+        <h1>Experience & Certifications</h1>
+        <p class="subtitle">Professional Journey | Achievements | Growth</p>
+        <p class="description">
+          A snapshot of my professional journey across different roles.<br>
+          Adaptable, driven, and always aiming for excellence in every project.
+        </p>
+      </div>
+
+      <div class="experience-grid">
+        <!-- Moonton Work Experience -->
+        <div class="experience-category">
+          <div class="category-header">
+            <div class="category-icon">🎮</div>
+            <h2 class="category-title">Moonton Experience</h2>
+          </div>
+
+          <!-- Data Analyst (Overlapping with Digital Artist) -->
+          <div class="experience-item">
+            <div class="status-indicator completed"></div>
+            <div class="experience-header">
+              <div class="role-info">
+                <h3>Data Analyst</h3>
+                <p class="company-name">Moonton</p>
+              </div>
+              <div class="date-range">Jun 2021 - Nov 2022</div>
+            </div>
+            <p class="experience-description">
+              Worked with complex gaming datasets to help the team make better business decisions. 
+              Built systems that made our data analysis more efficient and improved how we handled information quality control.
+            </p>
+            <ul class="experience-tasks">
+              <li>Tracked social media performance for MLBB content creators and streamers</li>
+              <li>Built web scrapers to collect engagement data like views, likes, and shares</li>
+              <li>Organized all the data using Google Sheets with custom formulas and pivot tables</li>
+              <li>Generated weekly performance reports showing which content types worked best</li>
+            </ul>
+            <button class="certificate-badge" onclick="openCertificate('data-analyst')">
+              📜 View Certificate
+            </button>
+          </div>
+
+          <!-- Customer Service Agent -->
+          <div class="experience-item">
+            <div class="status-indicator completed"></div>
+            <div class="experience-header">
+              <div class="role-info">
+                <h3>Customer Service Agent</h3>
+                <p class="company-name">Moonton</p>
+              </div>
+              <div class="date-range">Feb 2023 - Jul 2024</div>
+            </div>
+            <p class="experience-description">
+              Handled player support for Mobile Legends, solving issues such as technical problems and queries about the game. 
+              Got really good at keeping players happy even when dealing with frustrating situations.
+            </p>
+            <ul class="experience-tasks">
+              <li>Explained game mechanics and hero abilities to confused players</li>
+              <li>Answered questions about ongoing events, rewards, and participation requirements</li>
+              <li>Processed reports about toxic and verbally abusive players in matches</li>
+              <li>Maintained response time targets while handling multiple tickets daily</li>
+            </ul>
+          </div>
+
+          <!-- Translations Moderator (Current/Ongoing) -->
+          <div class="experience-item">
+            <div class="status-indicator current"></div>
+            <div class="experience-header">
+              <div class="role-info">
+                <h3>Translations Moderator</h3>
+                <p class="company-name">Moonton</p>
+              </div>
+              <div class="date-range">May 2024 - July 2025</div>
+            </div>
+            <p class="experience-description">
+              Currently managing the English-to-Tagalog translation process for game content and marketing materials. 
+              My job is making sure everything sounds natural to Filipino players while keeping the original meaning intact.
+            </p>
+            <ul class="experience-tasks">
+              <li>Translate game content directly from English to Tagalog</li>
+              <li>Adapt gaming terminology to fit Filipino gaming culture</li>
+              <li>Follow established style guides while adapting content for Filipino players</li>
+              <li>Meet tight deadlines for event announcements and promotional content</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Freelance Work -->
+        <div class="experience-category">
+          <div class="category-header">
+            <div class="category-icon">💼</div>
+            <h2 class="category-title">Freelance Work</h2>
+          </div>
+
+          <div class="experience-item">
+            <div class="status-indicator current"></div>
+            <div class="experience-header">
+              <div class="role-info">
+                <h3>Virtual Assistant</h3>
+                <p class="company-name">OnlineJobsPH (Part-time)</p>
+              </div>
+              <div class="date-range">Jul 2024 - July 2025</div>
+            </div>
+            <p class="experience-description">
+              Working with a well-respected freelance video editor to help them land more clients on Upwork and keep their video content polished. 
+              This role allows me to apply my writing skills and keen eye for detail in a professional freelance setting.
+            </p>
+            <ul class="experience-tasks">
+              <li>Write personalized cover letters tailored to each client's specific needs</li>
+              <li>Track proposal success rates and adjust writing strategies accordingly</li>
+              <li>Review completed video projects to catch any editing errors or inconsistencies</li>
+              <li>Brainstorm creative video concepts and content ideas for upcoming projects</li>
+              <li>Handle additional tasks as needed to support overall business operations</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Organization & Community Work -->
+        <div class="experience-category">
+          <div class="category-header">
+            <div class="category-icon">📝</div>
+            <h2 class="category-title">Organization & Community</h2>
+          </div>
+
+          <div class="experience-item">
+            <div class="status-indicator current"></div>
+            <div class="experience-header">
+              <div class="role-info">
+                <h3>Publicity Writing Committee</h3>
+                <p class="company-name">BUILDS - Bicol University Integrated League of DOST Scholars</p>
+              </div>
+              <div class="date-range">Organization Role</div>
+            </div>
+            <p class="experience-description">
+              Write social media captions and promotional content for our scholarship organization's events and activities. 
+              Love coming up with creative ways to get students excited about participating in our programs.
+            </p>
+            
+            <div class="social-links">
+              <a href="https://www.facebook.com/share/p/18ajpweN2x/" class="social-link" target="_blank">
+                🎓 BUDS Career Webinar
+              </a>
+              <a href="https://www.facebook.com/share/p/18wBYw99VP/" class="social-link" target="_blank">
+                ❤️ LOVEletting Blood Drive
+              </a>
+              <a href="https://www.facebook.com/share/p/1DwXWZmV3g/" class="social-link" target="_blank">
+                👥 Speaker Introductions
+              </a>
+              <a href="https://www.facebook.com/share/p/1EPSWvvq8g/" class="social-link" target="_blank">
+                🎂 Birthday Post #1
+              </a>
+              <a href="https://www.facebook.com/share/p/199Jo6e8Wu/" class="social-link" target="_blank">
+                🎂 Birthday Post #2
+              </a>
+              <a href="https://www.facebook.com/share/p/16AUdc6SER/" class="social-link" target="_blank">
+                📚 Mock Exam Documentation
+              </a>
+              <a href="https://www.facebook.com/share/p/1C6246UDme/" class="social-link" target="_blank">
+                🌱 Sustainability Trivia
+              </a>
+            </div>
+
+            <ul class="experience-tasks">
+              <li>Create engaging captions and content for social media posts</li>
+              <li>Develop creative ideas for organizational social media campaigns</li>
+              <li>Participate in volunteer activities supporting fellow scholars</li>
+              <li>Assist with information dissemination across social media platforms</li>
+            </ul>
+            <button class="certificate-badge" onclick="openCertificate('publicity')">
+              📜 View Certificate
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+      <div class="hero-skills">
+        <h1>Skills & Expertise<span class="blinking-cursor">_</span></h1>
+        <p class="subtitle">Technical Proficiency Meets Creative Vision</p>
+        <p class="description">
+          My skills are shaped by hands-on projects and academic experience, allowing me to solve problems creatively and deliver results that matter.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Technical Development -->
+        <div class="skill-category">
+          <div class="category-header">
+            <div class="category-icon">&lt;/&gt;</div>
+            <h3 class="category-title">Technical Development</h3>
+          </div>
+          <ul class="skills-list">
+            <li class="skill-item">
+              <div class="skill-name">Front-end Web Development</div>
+              <div class="skill-description">
+                Proficient in HTML, CSS, JavaScript, and Bootstrap for creating responsive, modern web interfaces. 
+                Experience building interactive user experiences with clean, semantic code.
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">Data Collection & Analysis</div>
+              <div class="skill-description">
+                Systematic approach to gathering, processing, and interpreting data sets. 
+                Strong foundation in research methodologies and statistical analysis from freelancing and academic background.
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">UI/UX Design Principles</div>
+              <div class="skill-description">
+                Able to create clean, user-friendly interfaces with a focus on clarity and usability. 
+                Understands how to apply layout, hierarchy, and user flow to improve the overall experience.
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Creative & Content -->
+        <div class="skill-category">
+          <div class="category-header">
+            <div class="category-icon">PEN</div>
+            <h3 class="category-title">Creative & Content</h3>
+          </div>
+          <ul class="skills-list">
+            <li class="skill-item">
+              <div class="skill-name">Copywriting</div>
+              <div class="skill-description">
+                Crafting compelling, conversion-focused content that resonates with target audiences. 
+                Expertise in creating clear, persuasive messaging across various platforms and formats.
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">Creative Writing & Social Media</div>
+              <div class="skill-description">
+                Developing engaging narratives and social media captions that capture brand voice. 
+                Strong storytelling abilities honed through academic writing and research excellence.
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">Graphic Design</div>
+              <div class="skill-description">
+                Creating visually appealing designs for digital and print media. 
+                Proficient in design principles, color theory, and visual communication strategies.
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Communication & Service -->
+        <div class="skill-category">
+          <div class="category-header">
+            <div class="category-icon">COM</div>
+            <h3 class="category-title">Communication & Service</h3>
+          </div>
+          <ul class="skills-list">
+            <li class="skill-item">
+              <div class="skill-name">Communication Skills</div>
+              <div class="skill-description">
+                Excellent verbal and written communication across diverse audiences. 
+                Proven ability to explain complex technical concepts in accessible language.
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">Customer Service</div>
+              <div class="skill-description">
+                Dedicated to delivering exceptional client experiences with patience and professionalism. 
+                Strong focus on understanding and exceeding customer expectations.
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">Technical Support</div>
+              <div class="skill-description">
+                Troubleshooting and resolving technical issues with systematic problem-solving approach. 
+                Ability to guide users through complex processes with clear instructions.
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Professional Skills -->
+        <div class="skill-category">
+          <div class="category-header">
+            <div class="category-icon">PRO</div>
+            <h3 class="category-title">Professional Skills</h3>
+          </div>
+          <ul class="skills-list">
+            <li class="skill-item">
+              <div class="skill-name">Conflict Resolution</div>
+              <div class="skill-description">
+                Skilled in mediating disputes and finding mutually beneficial solutions. 
+                Approach challenges with empathy and strategic thinking to maintain positive relationships.
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">Independent Work Management</div>
+              <div class="skill-description">
+                Self-motivated and organized, capable of managing multiple projects with minimal supervision. 
+                Strong time management and prioritization skills developed through academic excellence.
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">Adaptability</div>
+              <div class="skill-description">
+                Quick to learn new tools, systems, and methodologies. 
+                Proven ability to thrive in dynamic environments and embrace technological changes.
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="toolkit-section">
+        <h2 class="section-title">Toolkit & Technologies</h2>
+        <div class="toolkit-grid">
+          <div class="tool-item">
+            <div class="tool-name">Visual Studio Code</div>
+          </div>
+          <div class="tool-item">
+            <div class="tool-name">Git & GitHub</div>
+          </div>
+          <div class="tool-item">
+            <div class="tool-name">AIHelp.net</div>
+          </div>
+          <div class="tool-item">
+            <div class="tool-name">Canva</div>
+          </div>
+          <div class="tool-item">
+            <div class="tool-name">ChatGPT</div>
+          </div>
+          <div class="tool-item">
+            <div class="tool-name">Google Workspace</div>
+          </div>
+          <div class="tool-item">
+            <div class="tool-name">Microsoft Office</div>
+          </div>
+          <div class="tool-item">
+            <div class="tool-name">CapCut</div>
           </div>
         </div>
       </div>
@@ -189,11 +537,19 @@
     <div class="gallery-thumbnails" id="galleryThumbnails"></div>
   </div>
 
+  <!-- Certificate Modal -->
+  <div class="certificate-modal" id="certificateModal">
+    <div class="certificate-content">
+      <button class="certificate-close" onclick="closeCertificate()">×</button>
+      <img src="" alt="Certificate" class="certificate-image" id="certificateImage">
+    </div>
+  </div>
+
   <nav class="mobile-nav">
     <div class="mobile-nav-content">
-      <a href="index.html" class="mobile-nav-item active">About</a>
-      <a href="experience.html" class="mobile-nav-item">Experience</a>
-      <a href="skills.html" class="mobile-nav-item">Skills</a>
+      <a href="#about" class="mobile-nav-item active" data-section="about">About</a>
+      <a href="#experience" class="mobile-nav-item" data-section="experience">Experience</a>
+      <a href="#skills" class="mobile-nav-item" data-section="skills">Skills</a>
     </div>
   </nav>
 

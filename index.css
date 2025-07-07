@@ -282,9 +282,74 @@ body {
   min-height: 100vh;
 }
 
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
 .section {
   padding: 4rem 0 4rem;
   animation: fadeInUp 0.8s ease;
+  min-height: 100vh;
+  scroll-margin-top: 100px; /* Account for fixed header */
+}
+
+/* Section-specific styling */
+#about {
+  padding-top: 4.5rem; /* Reduced padding for first section */
+}
+
+#experience {
+  background: var(--bg-secondary);
+  position: relative;
+  padding-top: 4.5rem;
+}
+
+#experience::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+#skills {
+  background: var(--bg-primary);
+  position: relative;
+  padding-top: 4.5rem;
+}
+
+#skills::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+/* Ensure sections don't conflict with each other */
+.section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Light theme adjustments for sections */
+[data-theme="light"] #experience {
+  background: rgba(248, 250, 252, 0.8);
+}
+
+[data-theme="light"] #skills {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Smooth transition for section backgrounds */
+#experience,
+#skills {
+  transition: background-color 0.3s ease;
 }
 
 /* Simplified Hero Section */
@@ -786,7 +851,7 @@ body {
     .info-paragraph p {
       color: var(--text-secondary);
       line-height: 1.8;
-      font-size: 1.05rem;
+      font-size: 1.15rem;
       margin: 0;
     }
 
@@ -1249,3 +1314,10 @@ body {
       background: rgba(255, 255, 255, 0.9);
       border: 1px solid rgba(5, 150, 105, 0.15);
     }
+
+    /* Remove extra margin on .main and .section */
+    .main, .section {
+      margin-top: 0 !important;
+    }
+    
+    
