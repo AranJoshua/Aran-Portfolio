@@ -498,6 +498,10 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Set initial active section
   singlePageNav.updateActiveSection();
+  
+  // --- Reveal on Scroll Animation ---
+  addRevealOnScroll();
+  setupRevealOnScrollObserver();
 });
 
 // Page load animation
@@ -515,4 +519,55 @@ window.addEventListener('load', () => {
 });
 
 // Ensure page stays at the top on load
-window.scrollTo(0, 0); 
+window.scrollTo(0, 0);
+
+// --- Reveal on Scroll Animation ---
+function addRevealOnScroll() {
+  // Add .reveal-on-scroll to key elements if not already present
+  document.querySelectorAll('.section > .hero-content, .section > .hero-skills').forEach(el => {
+    el.classList.add('reveal-on-scroll');
+  });
+  document.querySelectorAll('.experience-category').forEach(el => {
+    el.classList.add('reveal-on-scroll');
+  });
+  document.querySelectorAll('.experience-item').forEach(el => {
+    el.classList.add('reveal-on-scroll');
+  });
+
+  // Staggered reveal for about section paragraphs and gallery controls
+  const aboutStaggerEls = [
+    ...document.querySelectorAll('#about .info-paragraph'),
+    ...document.querySelectorAll('#about .gallery-controls')
+  ];
+  aboutStaggerEls.forEach((el, i) => {
+    el.classList.add('reveal-on-scroll', 'staggered');
+    el.style.setProperty('--stagger-delay', `${i * 0.18 + 0.1}s`);
+  });
+
+  // Staggered reveal for skills section cards
+  const skillCards = document.querySelectorAll('#skills .skill-category');
+  skillCards.forEach((el, i) => {
+    el.classList.add('reveal-on-scroll', 'staggered');
+    el.style.setProperty('--stagger-delay', `${i * 0.15 + 0.1}s`);
+  });
+
+  // Staggered reveal for toolkit items
+  const toolItems = document.querySelectorAll('#skills .tool-item');
+  toolItems.forEach((el, i) => {
+    el.classList.add('reveal-on-scroll', 'staggered');
+    el.style.setProperty('--stagger-delay', `${i * 0.09 + 0.1}s`);
+  });
+}
+
+function setupRevealOnScrollObserver() {
+  const revealEls = document.querySelectorAll('.reveal-on-scroll');
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => observer.observe(el));
+} 

@@ -42,10 +42,10 @@
   --text-primary: #1f2937;
   --text-secondary: #4b5563;
   --text-muted: #6b7280;
-  --accent: #059669;
-  --accent-hover: #047857;
-  --accent-light: #10b981;
-  --accent-dark: #065f46;
+  --accent: #22d3ee;
+  --accent-hover: #0ea5e9;
+  --accent-light: #38bdf8;
+  --accent-dark: #0891b2;
   --accent-secondary: #dc2626;
   --accent-tertiary: #0891b2;
   --glass: rgba(255, 255, 255, 0.85);
@@ -54,7 +54,7 @@
   --shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 16px 64px rgba(0, 0, 0, 0.12);
   --shadow-xl: 0 24px 96px rgba(0, 0, 0, 0.15);
-  --glow-green: 0 0 25px rgba(5, 150, 105, 0.25);
+  --glow-green: 0 0 25px rgba(34, 211, 238, 0.18);
   --glow-red: 0 0 25px rgba(220, 38, 38, 0.25);
   --glow-cyan: 0 0 25px rgba(8, 145, 178, 0.25);
 }
@@ -324,11 +324,13 @@ html {
 #skills::before {
   content: '';
   position: absolute;
-  top: 0;
+  top: 2.5rem;
   left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  width: 4px;
+  height: 60px;
+  background: linear-gradient(180deg, var(--accent), transparent);
+  border-radius: 2px;
+  z-index: 2;
 }
 
 /* Ensure sections don't conflict with each other */
@@ -660,6 +662,86 @@ html {
 @keyframes pulse {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.1); }
+}
+
+@keyframes floatY {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-6px); }
+}
+
+.tool-item.revealed {
+  animation: floatY 2.8s ease-in-out infinite alternate;
+}
+
+/* Modern Glassmorphism for Info Paragraphs - No Blur, Animated Glow */
+.info-paragraph {
+  background: rgba(20, 30, 40, 0.72);
+  border-radius: 1.5rem;
+  border: 1.5px solid rgba(0,255,136,0.12);
+  border-left: 4px solid var(--accent);
+  box-shadow: 0 8px 32px rgba(0,255,136,0.08), 0 2px 8px rgba(0,0,0,0.10);
+  padding: 2.2rem 2.2rem 2.2rem 2.8rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  /* No blur */
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+.info-paragraph::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-light), var(--accent));
+  filter: drop-shadow(0 0 8px var(--accent));
+  opacity: 0.85;
+  animation: borderGlow 2.2s linear infinite alternate;
+  z-index: 1;
+}
+@keyframes borderGlow {
+  0% { filter: drop-shadow(0 0 8px var(--accent)); opacity: 0.85; }
+  100% { filter: drop-shadow(0 0 18px var(--accent-light)); opacity: 1; }
+}
+.info-paragraph:hover {
+  box-shadow: 0 12px 48px rgba(0,255,136,0.13), 0 4px 16px rgba(0,0,0,0.13);
+  border-left-color: var(--accent-light);
+}
+
+/* Responsive for mobile */
+@media (max-width: 700px) {
+  .info-paragraph {
+    padding: 1.2rem 1rem 1.2rem 1.3rem;
+    border-radius: 1rem;
+  }
+}
+
+/* Enhanced Reveal Animation with Stagger, Scale (No Blur) */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  /* No filter: blur */
+  transition: opacity 0.8s cubic-bezier(0.22,0.61,0.36,1), transform 0.8s cubic-bezier(0.22,0.61,0.36,1);
+  will-change: opacity, transform;
+}
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: none;
+}
+.reveal-on-scroll.staggered {
+  transition-delay: var(--stagger-delay, 0s);
+}
+
+/* Reveal on Scroll Animation */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.22,0.61,0.36,1), transform 0.8s cubic-bezier(0.22,0.61,0.36,1);
+  will-change: opacity, transform;
+}
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: none;
 }
 
 /* Responsive */
@@ -1318,6 +1400,14 @@ html {
     /* Remove extra margin on .main and .section */
     .main, .section {
       margin-top: 0 !important;
+    }
+
+    @media (max-width: 900px) {
+      #about::before,
+      #experience::before,
+      #skills::before {
+        display: none;
+      }
     }
     
     

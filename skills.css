@@ -13,9 +13,9 @@
     }
 
     [data-theme="light"] .skills-grid {
-      background: rgba(255, 255, 255, 0.9);
-      border: 1px solid rgba(5, 150, 105, 0.1);
-      box-shadow: 0 8px 32px rgba(5, 150, 105, 0.08);
+      background: #f6f8fa;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 4px 24px rgba(5, 150, 105, 0.06);
     }
 
     .skill-category {
@@ -58,13 +58,15 @@
     }
 
     [data-theme="light"] .skill-category {
-      background: rgba(255, 255, 255, 0.9);
-      border: 1px solid rgba(5, 150, 105, 0.15);
+      background: #f3f4f6;
+      border: 1.5px solid #e5e7eb;
+      box-shadow: 0 2px 12px rgba(5, 150, 105, 0.07);
     }
 
     [data-theme="light"] .skill-category:hover {
-      background: rgba(255, 255, 255, 0.95);
-      box-shadow: 0 12px 48px rgba(5, 150, 105, 0.15);
+      background: #f9fafb;
+      box-shadow: 0 8px 32px rgba(5, 150, 105, 0.12);
+      border-color: var(--accent);
     }
 
     .category-header {
@@ -92,7 +94,10 @@
     }
 
     [data-theme="light"] .category-icon {
-      color: white;
+      background: var(--accent);
+      color: #fff;
+      border: 1.5px solid #e5e7eb;
+      box-shadow: 0 2px 8px rgba(5, 150, 105, 0.08);
     }
 
     .category-title {
@@ -233,6 +238,7 @@
     .hero-skills {
       text-align: center;
       margin-bottom: 3rem;
+      position: relative;
     }
 
     .hero-skills h1 {
@@ -318,9 +324,24 @@
         grid-template-columns: 1fr;
       }
       
+      .toolkit-section {
+        padding: 1.2rem 0.5rem;
+        border-radius: 12px;
+        margin-top: 2rem;
+      }
       .toolkit-grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        gap: 0.7rem;
+        margin-top: 1rem;
+      }
+      .tool-item {
+        padding: 1rem 0.5rem;
+        font-size: 0.95rem;
+        border-radius: 10px;
+      }
+      .tool-name {
+        font-size: 0.95rem;
       }
     }
 

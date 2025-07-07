@@ -13,6 +13,7 @@
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  border-left: 4px solid var(--accent);
 }
 
 .experience-category::before {
@@ -36,6 +37,7 @@
 [data-theme="light"] .experience-category {
   background: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(5, 150, 105, 0.1);
+  border-left: 4px solid var(--accent);
 }
 
 [data-theme="light"] .experience-category:hover {
@@ -68,8 +70,10 @@
 }
 
 [data-theme="light"] .category-icon {
-  background: rgba(5, 150, 105, 0.05);
-  border: 1px solid rgba(5, 150, 105, 0.1);
+  background: #e0f2fe;
+  color: #1f2937;
+  border: 1.5px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(34, 211, 238, 0.10);
 }
 
 .category-title {
